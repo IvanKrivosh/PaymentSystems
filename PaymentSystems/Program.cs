@@ -8,7 +8,7 @@ List<IPaymentSystem> paymentSystems = new List<IPaymentSystem>()
     new PaymentSystemThree("system3.com", new CalculatorSHA1(), "1234567890")
 };
 
-foreach (var paymentSystem in paymentSystems)
+foreach (IPaymentSystem paymentSystem in paymentSystems)
     Console.WriteLine(paymentSystem.GetPayingLink(order));
 
 
